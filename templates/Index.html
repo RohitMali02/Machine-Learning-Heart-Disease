@@ -31,6 +31,7 @@ button{
   background-color: #FF0000;
   position: center;
   text-align: center;
+  font-weight: bold;
   font-family: "Times New Roman", Times, serif;
 }
 </style>
@@ -43,20 +44,20 @@ button{
     
      <form action="{{ url_for('Predict')}}"method="post">  
       <div class="col-sm-9">
-      <marquee direction="LEFT"><i><h1><font color="blue"><b>Exceptional Care With Exceptional Technology</b></font color="blue"></h1></i></marquee><br><br>
+      <marquee direction="LEFT"><i><h1><font color="blue"><b>Exceptional Care With Exceptional Technology</b></font color="blue"></h1></i></marquee><br><br><br><br>
 	<div class="main">
 		<div class=" register">
 
 		<h1><b><font color="#F70D1A"> PATIENT INFORMATION</font color="#F70D1A"></b></h1>
-		<br>
+		<br><br>
 		<form id="register" method="post">
-		   <br><br>
+		   
 		   
 			<div class="textbox">
 			<i class="fas fa-walking"></i>
-			<label>Age:</label>
+			<label><b>Age:</label>
 			<br><br>
-			<textarea class="form-control" rows="2" id="query1" name="query1" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query1}}</textarea>
+			<textarea class="form-control" rows="2" id="query1" name="query1" align="center" rows="2" cols="5" autofocus>{{query1}}</textarea>
 			<br><br><br>
 			</div>
 			
@@ -64,50 +65,50 @@ button{
 			<i class="fas fa-venus-mars"></i>
 			<label>Gender (for Female=0 & Male=1):</label>
 			<br><br>
-			<textarea class="form-control" rows="2" id="query2" name="query2" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query2}}</textarea>
+			<textarea class="form-control" rows="2" id="query2" name="query2" align="center" rows="2" cols="5" autofocus>{{query2}}</textarea>
 			<br><br><br>
 		        </div>
 		
 		<div class="textbox">
 			<i class="fas fa-joint"></i>
 			<label>Cigarets Per Day (Put '0' if not smoke):</label><br><br>
-			<textarea class="form-control" rows="2" id="query3" name="query3" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query3}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query3" name="query3" align="center" rows="2" cols="5" autofocus>{{query3}}</textarea><br><br><br>
 		</div>
 		
 		
 		<div class="textbox">
 			<i class="fas fa-capsules"></i>
 			<label> Hypertensive (For NO=0 & Yes=1):</label><br><br>
-			<textarea class="form-control" rows="2" id="query4" name="query4" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query4}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query4" name="query4" align="center" rows="2" cols="5" autofocus>{{query4}}</textarea><br><br><br>
 		</div>
 			
 		<div class="textbox">
 			<i class="fas fa-heartbeat"></i>
 			<label>Heart Rate:</label><br><br>
-			<textarea class="form-control" rows="2" id="query5" name="query5" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query5}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query5" name="query5" align="center" rows="2" cols="5" autofocus>{{query5}}</textarea><br><br><br>
 		</div>
 		<div class="textbox">
 			<i class="fas fa-dumbbell"></i>
 			<label>Body Mass Index:</label><br><br>
-			<textarea class="form-control" rows="2" id="query6" name="query6" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query6}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query6" name="query6" align="center" rows="2" cols="5" autofocus>{{query6}}</textarea><br><br><br>
 		</div>
 		
 		<div class="textbox">
 			<i class="fas fa-notes-medical"></i>
 			<label>Systolic Blood Pressure:</label><br><br>
-			<textarea class="form-control" rows="2" id="query7" name="query7" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query7}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query7" name="query7" align="center" rows="2" cols="5" autofocus>{{query7}}</textarea><br><br><br>
 		</div>
 			
 		<div class="textbox">
 			<i class="fas fa-book-medical"></i>
 			<label>Diastolic Blood Pressure</label><br><br>
-			<textarea class="form-control" rows="2" id="query8" name="query8" align="center" style="font weight: bold;" align="center" style="font-weight: bold;" rows="2" cols="5" autofocus>{{query8}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query8" name="query8" align="center" rows="2" cols="5" autofocus>{{query8}}</textarea><br><br><br>
 		</div>
 		
 		<div class="textbox">
 			<i class="fas fa-wine-bottle"></i>
 			<label>Glucose Level:</label><br><br>
-			<textarea class="form-control" rows="2" id="query9" name="query9" align="center" style="font weight: bold;" rows="2" cols="5" autofocus>{{query9}}</textarea><br><br><br>
+			<textarea class="form-control" rows="2" id="query9" name="query9" align="center" rows="2" cols="5" autofocus>{{query9}}</textarea><br><br><br>
 		     <br>
 		</div>
 			
