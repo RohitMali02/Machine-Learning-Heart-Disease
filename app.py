@@ -1,4 +1,3 @@
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier 
@@ -8,9 +7,11 @@ import re
 import math
 import pickle
 
+
 app = Flask("__name__")
 
 q = ""
+
 
 @app.route("/")
 def loadPage():
@@ -21,10 +22,7 @@ def loadPage():
 @app.route("/", methods=['POST'])
 def Predict():
    
-    df = pd.read_csv('Heart.csv')
-
-    df.info()
-
+ 
     inputQuery1 = request.form['query1']
     inputQuery2 = request.form['query2']
     inputQuery3 = request.form['query3']
@@ -46,11 +44,11 @@ def Predict():
     probability1 = model.predict_proba(new_df)[:,0]
     
     if single==1:
-        output = "The patient will diagnosed with Heart Disease"
-        output1 = "Confidence: {}".format(probability*100)
+        output = "THE PATIENT CAN BE DIAGNOSED WITH HEART DISEASE"
+        output1 = "CONFIDENCE: {}".format(probability*100)
     else:
-        output = "The patient will not diagnosed with Heart Disease"
-        output1 = "Confidence: {}".format(probability1*100)
+        output = "THE PATIENT CAN BE SAFE"
+        output1 = "CONFIDENCE: {}".format(probability1*100)
     
     return render_template('Index.html', output1=output, output2=output1, query1 = request.form['query1'], query2 = request.form['query2'], query3 = request.form['query3'], query4 = request.form['query4'], query5 = request.form['query5'], query6 = request.form['query6'], query7 = request.form['query7'], query8 = request.form['query8'], query9 = request.form['query9'])
     
