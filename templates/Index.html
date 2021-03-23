@@ -1,131 +1,129 @@
 <!DOCTYPE html>
-<html >
-
-<style>
-body {
-      background-image: url('https://previews.123rf.com/images/pitinan/pitinan1802/pitinan180200110/94772307-doctor-in-hospital-background-with-copy-space-healthcare-and-medical-concept-.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-</style>
-  
- <style>
-  textarea{
-  height: 45px;
-  width: 24%;
-  border: 1px solid #000000;
-  text-align: center;
-  background-color: rgba(0,0,0,0.1);
-  font-weight: bold;
-  font-size:large;
-  font-family: "Times New Roman", Times, serif;
-}
-</style>
-
-<style>
-button{
-  height: 50px;
-  width: 8%;
-  border: 2px solid #000000;
-  background-color: #FF0000;
-  position: center;
-  text-align: center;
-  font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
-}
-</style>
-
 <html>
-   <body>
-   <center>
-      <title>Heart Disease Prediction</title><br>
-      <br>
-    
-     <form action="{{ url_for('Predict')}}"method="post">  
-      <div class="col-sm-9">
-      <marquee direction="LEFT"><i><h1><font color="blue"><b>Exceptional Care With Exceptional Technology</b></font color="blue"></h1></i></marquee><br><br><br><br>
-	<div class="main">
-		<div class=" register">
 
-		<h1><b><font color="#F70D1A"> PATIENT INFORMATION</font color="#F70D1A"></b></h1>
-		<br><br>
-		<form id="register" method="post">
-		   
-		   
-			<div class="textbox">
-			<i class="fas fa-walking"></i>
-			<label><b>Age:</label>
-			<br><br>
-			<textarea class="form-control" rows="2" id="query1" name="query1" align="center" rows="2" cols="5" autofocus>{{query1}}</textarea>
-			<br><br><br>
-			</div>
-			
-			<div class="textbox">
-			<i class="fas fa-venus-mars"></i>
-			<label>Gender (for Female=0 & Male=1):</label>
-			<br><br>
-			<textarea class="form-control" rows="2" id="query2" name="query2" align="center" rows="2" cols="5" autofocus>{{query2}}</textarea>
-			<br><br><br>
-		        </div>
-		
-		<div class="textbox">
-			<i class="fas fa-joint"></i>
-			<label>Cigarets Per Day (Put '0' if not smoke):</label><br><br>
-			<textarea class="form-control" rows="2" id="query3" name="query3" align="center" rows="2" cols="5" autofocus>{{query3}}</textarea><br><br><br>
-		</div>
-		
-		
-		<div class="textbox">
-			<i class="fas fa-capsules"></i>
-			<label> Hypertensive (For NO=0 & Yes=1):</label><br><br>
-			<textarea class="form-control" rows="2" id="query4" name="query4" align="center" rows="2" cols="5" autofocus>{{query4}}</textarea><br><br><br>
-		</div>
-			
-		<div class="textbox">
-			<i class="fas fa-heartbeat"></i>
-			<label>Heart Rate:</label><br><br>
-			<textarea class="form-control" rows="2" id="query5" name="query5" align="center" rows="2" cols="5" autofocus>{{query5}}</textarea><br><br><br>
-		</div>
-		<div class="textbox">
-			<i class="fas fa-dumbbell"></i>
-			<label>Body Mass Index:</label><br><br>
-			<textarea class="form-control" rows="2" id="query6" name="query6" align="center" rows="2" cols="5" autofocus>{{query6}}</textarea><br><br><br>
-		</div>
-		
-		<div class="textbox">
-			<i class="fas fa-notes-medical"></i>
-			<label>Systolic Blood Pressure:</label><br><br>
-			<textarea class="form-control" rows="2" id="query7" name="query7" align="center" rows="2" cols="5" autofocus>{{query7}}</textarea><br><br><br>
-		</div>
-			
-		<div class="textbox">
-			<i class="fas fa-book-medical"></i>
-			<label>Diastolic Blood Pressure</label><br><br>
-			<textarea class="form-control" rows="2" id="query8" name="query8" align="center" rows="2" cols="5" autofocus>{{query8}}</textarea><br><br><br>
-		</div>
-		
-		<div class="textbox">
-			<i class="fas fa-wine-bottle"></i>
-			<label>Glucose Level:</label><br><br>
-			<textarea class="form-control" rows="2" id="query9" name="query9" align="center" rows="2" cols="5" autofocus>{{query9}}</textarea><br><br><br>
-		     <br>
-		</div>
-			
-			
-			<div class="col-sm-3">
-			<button type="submit" class="btn btn-primary" name="submit"><b>PREDICT<b></button><br><br><br>
-			</div>
-		  </form>
-		  </div>
-		  </div>
-			
-		<div class="row"> 
+	<style>
+		body {
+		  background-image: url('https://previews.123rf.com/images/pitinan/pitinan1802/pitinan180200110/94772307-doctor-in-hospital-background-with-copy-space-healthcare-and-medical-concept-.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: cover;
+		}
+	</style>
+  
+	<style>
+		input{
+		  height: 45px;
+		  width: 18%;
+		  border: 1px solid #000000;
+		  text-align: center;
+		  background-color: rgba(0,0,0,0.1);
+		  font-size:large;
+		  font-family: "Times New Roman", Times, serif;
+		  font-weight: bold;
+		}
+	</style>
+
+	<style>
+		textarea{
+		  height: 45px;
+		  width: 24%;
+		  border: 1px solid #000000;
+		  text-align: center;
+		  background-color:	rgba(0,0,0,0.1);
+		  font-size:large;
+		  font-family: "Times New Roman", Times, serif;
+		  font-weight: bold;
+		}
+	</style>
+
+	<style>
+		button{
+		  height: 50px;
+		  width: 8%;
+		  border: 2px solid #000000;
+		  background-color: #FF0000;
+		  position: center;
+		  text-align: center;
+		  font-family: "Times New Roman", Times, serif;
+		  font-weight: bold;
+		}
+	</style>
+
+	<head>
+	</head>
+
+   <body>
+		<center>
+			<title>Heart Disease Prediction</title><br><br>
+			<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+			<form action="{{ url_for('Predict')}}"method="post">  
 			<div class="col-sm-9">
-			<textarea class="form-control" rows="4" id="comment" name="query10" align="center" style="font weight: bold;" rows="4" cols="50" autofocus>{{output1}}</textarea><br><br><br>
-			<textarea class="form-control" rows="3" id="comment" name="query11" align="center" style="font weight: bold;" rows="3" cols="30" autofocus>{{output2}}</textarea>
+				<marquee direction="LEFT" ><i><h1><b><font color="blue">Exceptional Care With Exceptional Technology</font color="blue"><b><h1></i></marquee><br><br><br><br><br>
+				<div class="main">
+					<div class=" register">
+						<h1><b><font color="#F70D1A">PATIENT INFORMATION</font color="#F70D1A"></b></h1><br><br><br>
+						<form id="register" method="post">
+							<div class="textbox">
+								<i class="fas fa-walking"></i>
+								<label><b>Age:</label>
+								<br><br>
+								<textarea class="form-control" rows="2" id="query1" name="query1" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query1}}</textarea>
+								<br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-venus-mars"></i>
+								<label>Gender (for Female=0 & Male=1):</label>
+								<br><br>
+								<textarea class="form-control" rows="2" id="query2" name="query2" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query2}}</textarea><br><br><br>
+							</div>
+		
+							<div class="textbox">
+								<i class='fas fa-smoking'></i>
+								<label>Cigarets Per Day (Put '0' if not smoke):</label><br><br>
+								<textarea class="form-control" rows="2" id="query3" name="query3" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query3}}</textarea><br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-capsules"></i>
+								<label> Hypertensive (For NO=0 & Yes=1):</label><br><br>
+								<textarea class="form-control" rows="2" id="query4" name="query4" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query4}}</textarea>
+							</div>	
+							<div class="textbox">
+								<i class="fas fa-heartbeat"></i>
+								<label>Heart Rate:</label><br><br>
+								<textarea class="form-control" rows="2" id="query5" name="query5" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query5}}</textarea><br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-dumbbell"></i>
+								<label>Body Mass Index:</label><br><br>
+								<textarea class="form-control" rows="2" id="query6" name="query6" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query6}}</textarea><br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-notes-medical"></i>
+								<label>Systolic Blood Pressure:</label><br><br>
+								<textarea class="form-control" rows="2" id="query7" name="query7" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query7}}</textarea><br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-book-medical"></i>
+								<label>Diastolic Blood Pressure</label><br><br>
+								<textarea class="form-control" rows="2" id="query8" name="query8" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query8}}</textarea><br><br><br>
+							</div>
+							<div class="textbox">
+								<i class="fas fa-wine-bottle"></i>
+								<label>Glucose Level:</label><br><br>
+								<textarea class="form-control" rows="2" id="query9" name="query9" align="center" style="font-weight: bold;" rows="2" cols="25" required autofocus>{{query9}}</textarea><br><br><br><br>
+							</div>		
+							<div class="col-sm-3">
+								<button type="submit" class="btn btn-primary" name="submit"><b><h3><font color="white"> PREDICT </font color="white"><h3></b></button><br><br><br><br><br>
+							</div>
+							<div class="row"> 
+								<textarea class="form-control" rows="4" id="comment" name="query10" align="center" style="font-weight: bold;" rows="4" cols="50" >{{output1}}</textarea><br><br><br>
+								<textarea class="form-control" rows="3" id="comment" name="query11" align="center" style="font-weight: bold;" rows="3" cols="25" >{{output2}}</textarea><br><br><br>
+							</div>
+						</form>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>		
-   </body>
+			</form>
+		</center>
+    </body>
 </html>
